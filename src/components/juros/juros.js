@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NumericTextboxComponent from "react-numeric-textbox";
 import { Container, Content, CalculaMontanteButton } from "./styles";
-import { Row, Card } from "react-materialize";
+import { Row } from "react-materialize";
 import { ApiGateway } from "../../services/apis";
 
 class Juros extends Component {
@@ -97,14 +97,12 @@ class Juros extends Component {
           </Row>
           {this.state.montanteObtido && (
             <Row>
-              <Card>
                 <p>
                   <b>R$ {this.state.valorAplicado} </b> aplicado durante{" "}
                   <b> {this.state.meses}</b> meses, a taxa de{" "}
                   <b>{this.state.taxa * 100}% </b> ao mês, resultará num
                   montante de <b>R$ {this.state.montanteCalculado}</b>
                 </p>
-              </Card>
             </Row>
           )}
         </Content>
